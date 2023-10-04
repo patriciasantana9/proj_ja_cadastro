@@ -1,0 +1,45 @@
+{% extends 'cadastrados/base.html' %}
+
+{% block conteudo %}
+
+<form action="{% url 'listagem_gastos' %}" method="post" class="container mt-5">
+  {% csrf_token %}
+  <div class="container w-50 p-3">
+
+    <div class="input-group input-group-sm mb-3">
+      <label for="gas" class="input-group-text">Gás</label>
+      <input type="number" name="gas" id="n1" placeholder="0">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+      <label for="energia" class="input-group-text">Energia</label>
+      <input type="number" name="energia" id="n2" placeholder="0">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+      <label for="agua" class="input-group-text">Água</label>
+      <input type="number" name="agua" id="n3" placeholder="0">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+      <label for="comida" class="input-group-text">Comida</label>
+      <input type="number" name="comida" id="n4" placeholder="0">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+      <label for="aluguel" class="input-group-text">Aluguel</label>
+      <input type="number" name="aluguel" id="n5" placeholder="0">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+      <label for="outros" class="input-group-text">Outros</label>
+      <input type="number" name="outros" id="n6" placeholder="0">
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+
+  </div>
+
+</form>
+
+{% endblock %}

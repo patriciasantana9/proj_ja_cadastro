@@ -1,0 +1,36 @@
+{% extends 'cadastrados/base.html' %}
+
+{% block conteudo %}
+
+<div><h1>Gastos cadastrados</h1></div>
+
+<div class="container">
+   <table class="table table-bordered table-striped">
+      <tr>
+         <th>id</th>
+         <th>Gás</th>
+         <th>Energia</th>
+         <th>Água</th>
+         <th>Comida</th>
+         <th>Aluguel</th>
+         <th>Outros</th>
+      </tr>
+
+      {% for cadastrado in cadastrados %}
+
+      <tr>
+         <td>{{cadastrado.id_cadastrado}}</td>
+         <td>{{cadastrado.gas}}</td>
+         <td>{{cadastrado.energia}}</td>
+         <td>{{cadastrado.agua}}</td>
+         <td>{{cadastrado.comida}}</td>
+         <td>{{cadastrado.aluguel}}</td>
+         <td>{{cadastrado.outros}}</td>
+      </tr>
+
+      {% endfor %}
+
+   </table>
+</div>
+
+{% endblock %}
